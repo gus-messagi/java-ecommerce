@@ -25,7 +25,7 @@ public class UserDto {
     public UserEntity toWriteRepository() {
         return new UserEntity()
                 .setEmail(this.getEmail().getAddress())
-                .setPassword(this.getPassword().getHash())
+                .setPassword(this.getPassword().getValue())
                 .setName(this.getName())
                 .setType(this.getType());
     }
